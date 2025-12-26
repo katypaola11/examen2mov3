@@ -62,36 +62,19 @@ Future<void> login(correo, contrasenia, context) async {
 
     Navigator.pushNamed(context, '/guardar');
   } on FirebaseAuthException catch (e) {
-    msjerror(context, e.code);
+    if (e.code == 'user-not-found') {
+      print('No user found for that email.');
+    } else if (e.code == 'wrong-password') {
+      print('Wrong password provided for that user.');
+    }
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text("Error"),
+          content: Text("Error al iniciar Sesion"),
+        );
+      },
+    );
   }
-}
-
-void msjerror(BuildContext context, String code) {
-  String mensaje = '';
-
-  if (code == 'user-not-found') {
-    mensaje = 'No existe un usuario con ese correo';
-  } else if (code == 'wrong-password') {
-    mensaje = 'Contraseña incorrecta';
-  } else if (code == 'invalid-email') {
-    mensaje = 'Correo inválido';
-  } else if (code == 'too-many-requests') {
-    mensaje = 'Demasiados intentos, intenta más tarde';
-  } else {
-    mensaje = 'Error al iniciar sesión';
-  }
-
-  showDialog(
-    context: context,
-    builder: (_) => AlertDialog(
-      title: const Text('Error'),
-      content: Text(mensaje),
-      actions: [
-        TextButton(
-          onPressed: () => Navigator.pop(context),
-          child: const Text('OK'),
-        ),
-      ],
-    ),
-  );
 }
