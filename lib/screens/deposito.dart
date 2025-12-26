@@ -43,7 +43,6 @@ Widget Listar(context) {
               ),
               onTap: () => mostrar(context, item),
             );
-            
           },
         );
       } else {

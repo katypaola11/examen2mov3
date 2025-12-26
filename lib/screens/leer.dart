@@ -25,7 +25,7 @@ class LeerDepositoScreen extends StatelessWidget {
   }
 }
 
-// Leer transferencias desde Firebase
+
 Future<List> leerDepositos() async {
   List transferencias = [];
   final user = FirebaseAuth.instance.currentUser;
@@ -49,7 +49,7 @@ Future<List> leerDepositos() async {
   return transferencias;
 }
 
-// Widget que muestra la lista
+
 Widget listaDepositos() {
   return FutureBuilder(
     future: leerDepositos(),
@@ -118,7 +118,7 @@ Widget listaDepositos() {
   );
 }
 
-// Eliminar transferencia
+
 Future<void> eliminarDeposito(String id) async {
   final user = FirebaseAuth.instance.currentUser;
   if (user == null) return;
