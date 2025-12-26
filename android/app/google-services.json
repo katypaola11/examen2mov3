@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "362008093276",
+    "project_id": "mov3-f",
+    "storage_bucket": "mov3-f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362008093276:android:b4ab84b4bd2da8a5effc99",
+        "android_client_info": {
+          "package_name": "com.example.examen2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUgr36ZP0-E-nQC4OtNsSVUgAtEsCaoQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362008093276:android:ae16f8fd795d9922effc99",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_moviles3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUgr36ZP0-E-nQC4OtNsSVUgAtEsCaoQQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
